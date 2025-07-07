@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal - Find Your Dream Job</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/portallogo.png">
+</head>
+<body>
+    <!-- Header -->
+<header>
+        <nav class="navbar">
+            <img src="assets/images/portallogo.png" alt="Job Portal Logo">
+            <ul class="menu">
+                <!-- Mobile Menu Header -->
+                <div class="mobile-menu-header">
+                    <h3>Job Portal</h3>
+                    <p>Find Your Dream Job</p>
+                </div>
+                
+                <!-- Mobile Menu Close Button -->
+                <div class="mobile-menu-close"></div>
+                
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <button onclick="window.location.href='pages/join.html'">Join Now</button>
+            </ul>
+            <div class="Hambug">
+      <span class="span1"></span>
+      <span class="span2"></span>
+      <span class="span3"></span>
+    </div>
+        </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <!-- 3D Graphics Elements -->
+      <div class="hero-3d-elements">
+        <div class="hero-3d-element"></div>
+        <div class="hero-3d-element"></div>
+        <div class="hero-3d-element"></div>
+        <div class="hero-3d-element"></div>
+        <div class="hero-3d-element"></div>
+        <div class="hero-3d-element"></div>
+      </div>
+      
+      <!-- 3D Cube -->
+      <div class="hero-3d-cube">
+        <div class="cube-face front"></div>
+        <div class="cube-face back"></div>
+        <div class="cube-face right"></div>
+        <div class="cube-face left"></div>
+        <div class="cube-face top"></div>
+        <div class="cube-face bottom"></div>
+      </div>
+      
+      <!-- 3D Pyramid -->
+      <div class="hero-3d-pyramid"></div>
+      
+      <div class="hero-box">  
+        <div class="hero-left">
+          <h2>Find Your Dream Job Today</h2>
+          <p>Discover thousands of job opportunities with all the information you need. Its your future.</p>
+          <div class="search">
+            <input type="text" id="hero-search" placeholder="Job title, keywords, or company">
+            <button id="hero-search-btn">Search Jobs</button>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img src="assets/images/workinggroup.png" alt="Working Group">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Why Choose Us</h2>
+        <p>We provide the best job opportunities for you</p>
+  <div class="options">
+    <div class="options-icons">
+                <i class="fas fa-search"></i>
+                <h3>Easy Search</h3>
+                <p>Find jobs that match your skills and preferences with our advanced search filters.</p>
+    </div>
+    <div class="options-icons">
+                <i class="fas fa-users"></i>
+                <h3>Top Companies</h3>
+                <p>Connect with leading companies and startups from around the world.</p>
+    </div>
+       <div class="options-icons">
+                <i class="fas fa-clock"></i>
+                <h3>Quick Apply</h3>
+                <p>Apply to multiple jobs quickly with our streamlined application process.</p>
+    </div>
+       <div class="options-icons">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Platform</h3>
+                <p>Your data is protected with industry-standard security measures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section class="jobs" id="jobs">
+        <h2>Latest Job Openings</h2>
+        <p>Find the perfect job that matches your skills and career goals</p>
+        
+        <!-- Advanced Filters -->
+        <div class="advanced-filters">
+            <h3>Advanced Filters</h3>
+            <div class="filter-group">
+                <label for="salary-range">Salary Range:</label>
+                <select id="salary-range">
+                    <option value="all">All Ranges</option>
+                    <option value="low">$0 - $80,000</option>
+                    <option value="medium">$80,000 - $120,000</option>
+                    <option value="high">$120,000+</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="experience-level">Experience Level:</label>
+                <select id="experience-level">
+                    <option value="all">All Levels</option>
+                    <option value="Entry">Entry Level</option>
+                    <option value="Mid">Mid Level</option>
+                    <option value="Senior">Senior Level</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="work-type">Work Type:</label>
+                <select id="work-type">
+                    <option value="all">All Types</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+                    <option value="Freelancer">Freelancer</option>
+                </select>
+            </div>
+            <button class="filter-btn">Apply Filters</button>
+            <button class="filter-btn clear">Clear All</button>
+        </div>
+
+        <div class="job-main-container">
+            <ul class="jobs-id">
+                <li data-target="all" class="active">All Jobs</li>
+                <li data-target="Full Time">Full Time</li>
+                <li data-target="Part Time">Part Time</li>
+                <li data-target="Freelancer">Freelancer</li>
+                <li data-target="favorites">Favorites</li>
+            </ul>
+            <div class="jobs-container"></div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+  <section class="trust">
+        <h2>Trusted by the World's Best</h2>
+        <p>Join thousands of companies that trust our platform</p>
+    <div class="t-box">
+            <div class="brand-item">
+                <img src="assets/images/googleicon.png" alt="Google">
+                <div class="brand-name">Google</div>
+            </div>
+            <div class="brand-item">
+                <img src="assets/images/facebookicon.png" alt="Facebook">
+                <div class="brand-name">Facebook</div>
+            </div>
+            <div class="brand-item">
+                <img src="assets/images/amazon.png" alt="Amazon">
+                <div class="brand-name">Amazon</div>
+            </div>
+            <div class="brand-item">
+                <img src="assets/images/spotify.png" alt="Spotify">
+                <div class="brand-name">Spotify</div>
+            </div>
+            <div class="brand-item">
+                <img src="assets/images/ubericon.png" alt="Uber">
+                <div class="brand-name">Uber</div>
+            </div>
+    </div>
+  </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <h2>Highest Rated Freelancer</h2>
+    <p>Most viewed and all-time top-selling services</p>
+        
+        <div class="team-slider-container">
+            <div class="team-slider-track">
+      <div class="team-box">
+                    <img src="assets/images/pankaj.jpg" alt="Pankaj">
+                    <h3>Pankaj Kumar</h3>
+                    <p>Full Stack Developer</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+                    <p class="skills">React, Node.js, MongoDB</p>
+                    <p class="rate">$45/hour</p>
+      </div>
+       <div class="team-box">
+                    <img src="assets/images/sagar.jpg" alt="Sagar">
+                    <h3>Sagar Patel</h3>
+                    <p>UI/UX Designer</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
+                    <p class="skills">Figma, Adobe XD, Sketch</p>
+                    <p class="rate">$40/hour</p>
+      </div>
+       <div class="team-box">
+                    <img src="assets/images/sanjeev.jpg" alt="Sanjeev">
+                    <h3>Sanjeev Singh</h3>
+                    <p>Mobile Developer</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+                    <p class="skills">React Native, Flutter, iOS</p>
+                    <p class="rate">$50/hour</p>
+      </div>
+       <div class="team-box">
+                    <img src="assets/images/vidya.jpg" alt="Vidya">
+                    <h3>Vidya Sharma</h3>
+                    <p>Data Scientist</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.7</div>
+                    <p class="skills">Python, TensorFlow, SQL</p>
+                    <p class="rate">$55/hour</p>
+      </div>
+       <div class="team-box">
+                    <img src="assets/images/person1.jpg" alt="Alex">
+                    <h3>Alex Johnson</h3>
+                    <p>DevOps Engineer</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
+                    <p class="skills">Docker, Kubernetes, AWS</p>
+                    <p class="rate">$60/hour</p>
+      </div>
+       <div class="team-box">
+                    <img src="assets/images/person2.jpg" alt="Maria">
+                    <h3>Maria Garcia</h3>
+                    <p>Frontend Developer</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+                    <p class="skills">Vue.js, TypeScript, CSS3</p>
+                    <p class="rate">$42/hour</p>
+                </div>
+            </div>
+            
+            <button class="team-slider-btn prev" id="team-prev-btn">❮</button>
+            <button class="team-slider-btn next" id="team-next-btn">❯</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <p>Have questions? We'd love to hear from you.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Job Street, Tech City, TC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@jobportal.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <div class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our platform</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I apply for a job?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Click on the "View Details" button for any job listing, then follow the application instructions provided by the employer.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is it free to use this platform?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our basic job search and application features are completely free for job seekers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I save jobs to favorites?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Click the heart icon on any job card to save it to your favorites. You can view all saved jobs in the Favorites tab.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I upload my resume?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, we support direct application through employer links. Resume upload functionality is coming soon!</p>
+                    </div>
+                </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-box">
+      <div class="top">
+        <div class="top-left">
+                    <img src="assets/images/portallogo.png" alt="Job Portal Logo">
+                    <p>Find your dream job with the world's best job portal</p>
+        </div>
+        <div class="top-right">
+                    <img src="assets/images/googleicon.png" alt="Google">
+                    <img src="assets/images/facebookicon.png" alt="Facebook">
+                    <img src="assets/images/amazon.png" alt="Amazon">
+                    <img src="assets/images/spotify.png" alt="Spotify">
+                    <img src="assets/images/ubericon.png" alt="Uber">
+        </div>
+      </div>
+      <div class="bottom">
+        <div>
+                    <h2>For Job Seekers</h2>
+                    <h3>Browse Jobs</h3>
+                    <h3>Create Profile</h3>
+                    <h3>Job Alerts</h3>
+                    <h3>Career Advice</h3>
+        </div>
+        <div>
+                    <h2>For Employers</h2>
+                    <h3>Post a Job</h3>
+                    <h3>Browse Candidates</h3>
+                    <h3>Pricing Plans</h3>
+                    <h3>Recruitment Tools</h3>
+        </div>
+        <div>
+                    <h2>Company</h2>
+                    <h3>About Us</h3>
+                    <h3>Contact</h3>
+                    <h3>Careers</h3>
+                    <h3>Blog</h3>
+        </div>
+        <div>
+                    <h2>Support</h2>
+                    <h3>Help Center</h3>
+          <h3>Privacy Policy</h3>
+                    <h3>Terms of Service</h3>
+                    <h3>Cookie Policy</h3>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Job Modal -->
+    <div id="job-modal" class="job-modal">
+        <div class="job-modal-content">
+            <span class="job-modal-close">&times;</span>
+            <div id="job-modal-body">
+                <!-- Job details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <!-- Load section scripts first -->
+    <script src="assets/js/sections/header.js"></script>
+    <script src="assets/js/sections/jobs.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/sections/sliders.js"></script>
+    <script src="assets/js/sections/animations.js"></script>
+    
+    <!-- Load main script last -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

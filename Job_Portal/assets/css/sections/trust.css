@@ -1,0 +1,241 @@
+/* Trust Section Styles */
+.trust {
+  padding: 8rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.trust::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.trust > h2 {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  position: relative;
+  z-index: 2;
+}
+
+.trust > p {
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.trust .t-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.trust .t-box .brand-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.trust .t-box .brand-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.trust .t-box .brand-item:hover::before {
+  opacity: 1;
+}
+
+.trust .t-box .brand-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.trust .t-box .brand-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.trust .t-box .brand-item:hover img {
+  transform: scale(1.1) rotate(5deg);
+  filter: brightness(1.2) contrast(1.2) saturate(1.2);
+}
+
+/* Brand-specific color filters */
+.trust .t-box .brand-item:nth-child(1) img {
+  filter: brightness(0.9) contrast(1.1) hue-rotate(0deg);
+}
+
+.trust .t-box .brand-item:nth-child(1):hover img {
+  filter: brightness(1.2) contrast(1.2) hue-rotate(0deg) saturate(1.3);
+}
+
+.trust .t-box .brand-item:nth-child(2) img {
+  filter: brightness(0.9) contrast(1.1) hue-rotate(10deg);
+}
+
+.trust .t-box .brand-item:nth-child(2):hover img {
+  filter: brightness(1.2) contrast(1.2) hue-rotate(10deg) saturate(1.3);
+}
+
+.trust .t-box .brand-item:nth-child(3) img {
+  filter: brightness(0.9) contrast(1.1) hue-rotate(20deg);
+}
+
+.trust .t-box .brand-item:nth-child(3):hover img {
+  filter: brightness(1.2) contrast(1.2) hue-rotate(20deg) saturate(1.3);
+}
+
+.trust .t-box .brand-item:nth-child(4) img {
+  filter: brightness(0.9) contrast(1.1) hue-rotate(30deg);
+}
+
+.trust .t-box .brand-item:nth-child(4):hover img {
+  filter: brightness(1.2) contrast(1.2) hue-rotate(30deg) saturate(1.3);
+}
+
+.trust .t-box .brand-item:nth-child(5) img {
+  filter: brightness(0.9) contrast(1.1) hue-rotate(40deg);
+}
+
+.trust .t-box .brand-item:nth-child(5):hover img {
+  filter: brightness(1.2) contrast(1.2) hue-rotate(40deg) saturate(1.3);
+}
+
+.trust .t-box .brand-item .brand-name {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.trust .t-box .brand-item:hover .brand-name {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Floating animations with different delays */
+.trust .t-box .brand-item:nth-child(1) { animation: float 3s ease-in-out infinite; }
+.trust .t-box .brand-item:nth-child(2) { animation: float 3s ease-in-out infinite 0.5s; }
+.trust .t-box .brand-item:nth-child(3) { animation: float 3s ease-in-out infinite 1s; }
+.trust .t-box .brand-item:nth-child(4) { animation: float 3s ease-in-out infinite 1.5s; }
+.trust .t-box .brand-item:nth-child(5) { animation: float 3s ease-in-out infinite 2s; }
+
+/* Glow effect on hover */
+.trust .t-box .brand-item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.trust .t-box .brand-item:hover::after {
+  width: 200px;
+  height: 200px;
+}
+
+/* Brand-specific glow colors */
+.trust .t-box .brand-item:nth-child(1):hover::after {
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.3) 0%, transparent 70%);
+}
+
+.trust .t-box .brand-item:nth-child(2):hover::after {
+  background: radial-gradient(circle, rgba(100, 149, 237, 0.3) 0%, transparent 70%);
+}
+
+.trust .t-box .brand-item:nth-child(3):hover::after {
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
+}
+
+.trust .t-box .brand-item:nth-child(4):hover::after {
+  background: radial-gradient(circle, rgba(50, 205, 50, 0.3) 0%, transparent 70%);
+}
+
+.trust .t-box .brand-item:nth-child(5):hover::after {
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, transparent 70%);
+}
+
+@media (max-width: 768px) {
+  .trust .t-box {
+    gap: 2rem;
+  }
+
+  .trust .t-box .brand-item {
+    padding: 1.5rem;
+  }
+
+  .trust .t-box .brand-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .trust > h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust .t-box {
+    gap: 1.5rem;
+  }
+
+  .trust .t-box .brand-item {
+    padding: 1rem;
+  }
+
+  .trust .t-box .brand-item img {
+    width: 50px;
+    height: 50px;
+  }
+} 

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Support - Job Portal</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="../index.html"><img src="../assets/images/portallogo.png" alt="Logo"></a>
+      <ul class="menu" id="menu">
+        <li><a href="../index.html#hero">Home</a></li>
+        <li><a href="../index.html#jobs">Browse Job</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+      <div class="Hambug" id="Hambug">
+        <span class="span1"></span>
+        <span class="span2"></span>
+        <span class="span3"></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="margin-top:60px; background:var(--primary-color); color:white;">
+    <div class="hero-box">
+      <div class="hero-left">
+        <h2>Contact & Support</h2>
+        <p>We're here to help! Get in touch with our team for any questions or support you need.</p>
+      </div>
+      <div class="hero-right">
+        <img src="../assets/images/workinggroup.png" alt="Support Team">
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send us a Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="technical">Technical Support</option>
+                <option value="billing">Billing Question</option>
+                <option value="partnership">Partnership</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="info-item">
+            <i class='bx bx-envelope'></i>
+            <div>
+              <h4>Email</h4>
+              <p>support@jobportal.com</p>
+              <p>info@jobportal.com</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <i class='bx bx-phone'></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+              <p>Mon-Fri: 9AM-6PM EST</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <i class='bx bx-map'></i>
+            <div>
+              <h4>Address</h4>
+              <p>123 Job Street</p>
+              <p>Tech City, TC 12345</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class='bx bxl-facebook'></i></a>
+              <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+              <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+              <a href="#" class="social-icon"><i class='bx bxl-instagram'></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h4>How do I create an account?</h4>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="faq-answer">
+            <p>Creating an account is easy! Simply click on the "Join" button in the navigation and fill out the registration form with your details.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h4>How do I apply for a job?</h4>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="faq-answer">
+            <p>Browse through our job listings, click on any job that interests you, and use the "Apply Now" button to submit your application.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h4>Can I save jobs for later?</h4>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! You can save jobs to your favorites by clicking the heart icon on any job card. View all your saved jobs in the "Favorites" tab.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h4>How do I update my profile?</h4>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="faq-answer">
+            <p>Log into your account and go to your profile settings. You can update your information, skills, experience, and portfolio at any time.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h4>Is the platform free to use?</h4>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, our basic features are completely free! We also offer premium features for advanced users and employers.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h4>How do I contact support?</h4>
+            <i class='bx bx-chevron-down'></i>
+          </div>
+          <div class="faq-answer">
+            <p>You can reach our support team through the contact form above, email us at support@jobportal.com, or call us during business hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ Toggle Function
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('i');
+      
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // Contact Form Submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Show success message
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      
+      // Reset form
+      this.reset();
+    });
+
+    // Mobile menu toggle
+    const Ham_btn = document.getElementById('Hambug');
+    const menu = document.getElementById('menu');
+    
+    Ham_btn.addEventListener('click', ()=>{
+      menu.classList.toggle('active');
+      Ham_btn.classList.toggle('active');
+    });
+  </script>
+</body>
+</html> 

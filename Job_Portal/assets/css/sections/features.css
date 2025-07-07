@@ -1,0 +1,107 @@
+/* Features Section Styles */
+.features{
+  padding: 8rem 2rem;
+  background: white;
+}
+
+.features  h2{
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.features  p{
+  text-align: center;
+  font-size: 1.8rem;
+  color: #666;
+  margin-bottom: 4rem;
+}
+
+.features .options{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features .options .options-icons{
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.features .options .options-icons::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.features .options .options-icons:hover::before {
+  opacity: 0.05;
+}
+
+.features .options .options-icons:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color);
+}
+
+.features .options .options-icons i{
+  font-size: 4rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.features .options .options-icons:hover i {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.features .options .options-icons h3{
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.features .options .options-icons:hover h3 {
+  color: var(--accent-color);
+}
+
+.features .options .options-icons p{
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.features .options .options-icons:hover p {
+  color: var(--text-dark);
+}
+
+@media (max-width : 500px){
+  .features .options .options-icons{
+    padding: 2rem 1.5rem;
+  }
+} 

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us - Job Portal</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .join-section {
+      margin-top: 72px;
+      min-height: calc(100vh - 72px);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .join-container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      padding: 3rem;
+      max-width: 500px;
+      width: 100%;
+      animation: fadeInUp 0.6s;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .join-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .join-header h1 {
+      font-size: 2.8rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .join-header p {
+      color: #666;
+      font-size: 1.4rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+      font-size: 1.4rem;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #ff6b6b;
+      box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+      transform: translateY(-2px);
+    }
+    .user-type {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .user-type label {
+      flex: 1;
+      padding: 1rem;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .user-type input[type="radio"] {
+      display: none;
+    }
+    .user-type input[type="radio"]:checked + label {
+      border-color: #ff6b6b;
+      background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 1.2rem;
+      background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+    .submit-btn:hover {
+      background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+    }
+    .login-link a {
+      color: #ff6b6b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+      color: #ee5a24;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="../index.html"><img src="../assets/images/portallogo.png" alt="Logo"></a>
+      <ul class="menu" id="menu">
+        <li><a href="../index.html#hero">Home</a></li>
+        <li><a href="../index.html#jobs">Browse Job</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+      <div class="Hambug" id="Hambug">
+        <span class="span1"></span>
+        <span class="span2"></span>
+        <span class="span3"></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="join-section">
+    <div class="join-container">
+      <div class="join-header">
+        <h1>Join Our Platform</h1>
+        <p>Create your account and start your journey</p>
+      </div>
+      
+      <form id="join-form">
+        <div class="form-group">
+          <label for="fullname"><i class="fas fa-user"></i> Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+        </div>
+        
+        <div class="form-group">
+          <label><i class="fas fa-users"></i> I am a:</label>
+          <div class="user-type">
+            <input type="radio" id="jobseeker" name="user-type" value="jobseeker" required>
+            <label for="jobseeker"><i class="fas fa-search"></i> Job Seeker</label>
+            <input type="radio" id="employer" name="user-type" value="employer" required>
+            <label for="employer"><i class="fas fa-building"></i> Employer</label>
+          </div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+      
+      <div class="login-link">
+        Already have an account? <a href="login.html">Sign In</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Form submission handling
+    document.getElementById('join-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Basic validation
+      if (data.password !== data['confirm-password']) {
+        showMessage('Passwords do not match!', 'error');
+        return;
+      }
+      
+      if (data.password.length < 6) {
+        showMessage('Password must be at least 6 characters long!', 'error');
+        return;
+      }
+      
+      if (!data['user-type']) {
+        showMessage('Please select whether you are a Job Seeker or Employer!', 'error');
+        return;
+      }
+      
+      // Show loading state
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Creating Account...';
+      submitBtn.disabled = true;
+      
+      // Simulate form submission
+      setTimeout(() => {
+        showMessage('Account created successfully! Welcome to our platform.', 'success');
+        this.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 2000);
+    });
+
+    // Show message function
+    function showMessage(message, type) {
+      // Remove existing message
+      const existingMessage = document.querySelector('.message');
+      if (existingMessage) {
+        existingMessage.remove();
+      }
+      
+      // Create new message
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${type}`;
+      messageDiv.innerHTML = `
+        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+        ${message}
+      `;
+      
+      // Add styles
+      messageDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 600;
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+        background: ${type === 'success' ? 'linear-gradient(45deg, #00b894, #00cec9)' : 'linear-gradient(45deg, #ff6b6b, #ee5a24)'};
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      `;
+      
+      document.body.appendChild(messageDiv);
+      
+      // Remove message after 5 seconds
+      setTimeout(() => {
+        messageDiv.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => messageDiv.remove(), 300);
+      }, 5000);
+    }
+
+    // Mobile menu toggle
+    const Ham_btn = document.getElementById('Hambug');
+    const menu = document.getElementById('menu');
+    
+    Ham_btn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      Ham_btn.classList.toggle('active');
+    });
+    
+    // Add CSS animations
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html> 

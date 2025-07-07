@@ -1,0 +1,722 @@
+/* Reset and Base Styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-neon: #00ffff;
+  --secondary-neon: #ff00ff;
+  --accent-neon: #ffff00;
+  --success-neon: #00ff88;
+  --warning-neon: #ffaa00;
+  --danger-neon: #ff4444;
+  --dark-bg: #0a0a0a;
+  --darker-bg: #050505;
+  --panel-bg: rgba(20, 20, 20, 0.95);
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --glow-primary: 0 0 20px var(--primary-neon);
+  --glow-secondary: 0 0 20px var(--secondary-neon);
+  --glow-accent: 0 0 20px var(--accent-neon);
+  --glow-success: 0 0 20px var(--success-neon);
+  --glow-danger: 0 0 20px var(--danger-neon);
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+  color: var(--text-primary);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Animated Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 0, 0.05) 0%, transparent 50%);
+  animation: backgroundShift 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes backgroundShift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-10px, -10px) scale(1.1); }
+  50% { transform: translate(10px, -5px) scale(0.9); }
+  75% { transform: translate(-5px, 10px) scale(1.05); }
+}
+
+/* Particles Container */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Main Game Container */
+.game-container {
+  position: relative;
+  z-index: 1;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--primary-neon);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo-icon {
+  font-size: 4rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.logo h1 {
+  font-family: 'Orbitron', monospace;
+  font-size: 3.6rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.logo-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin-top: -0.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem 2rem;
+  background: var(--panel-bg);
+  border: 1px solid var(--primary-neon);
+  border-radius: 1rem;
+  box-shadow: var(--glow-primary);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--primary-neon);
+}
+
+.stat-label {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary-neon);
+  font-family: 'Orbitron', monospace;
+}
+
+/* Main Content */
+.game-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Mission Control */
+.mission-control {
+  background: var(--panel-bg);
+  border: 2px solid var(--primary-neon);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: var(--glow-primary);
+  backdrop-filter: blur(10px);
+}
+
+.input-section {
+  margin-bottom: 3rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.mission-input {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--primary-neon);
+  border-radius: 1rem;
+  color: var(--text-primary);
+  font-family: 'Rajdhani', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.mission-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.mission-input:focus {
+  outline: none;
+  box-shadow: var(--glow-primary);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--primary-neon);
+}
+
+.add-btn i {
+  font-size: 2rem;
+}
+
+/* Control Panel */
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+.filter-btn.active {
+  background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+  color: var(--dark-bg);
+  box-shadow: var(--glow-primary);
+}
+
+.clear-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: linear-gradient(45deg, var(--danger-neon), #ff6666);
+  color: white;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.clear-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--danger-neon);
+}
+
+/* Mission List */
+.mission-list {
+  background: var(--panel-bg);
+  border: 2px solid var(--primary-neon);
+  border-radius: 2rem;
+  min-height: 40rem;
+  max-height: 60rem;
+  overflow-y: auto;
+  padding: 2rem;
+  box-shadow: var(--glow-primary);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.mission-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mission-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.mission-list::-webkit-scrollbar-thumb {
+  background: var(--primary-neon);
+  border-radius: 4px;
+}
+
+.mission-list::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-neon);
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.empty-icon {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+.empty-state h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.empty-state p {
+  font-size: 1.6rem;
+}
+
+/* Task Items */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.task:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-neon);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.task.completed {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: var(--success-neon);
+  opacity: 0.7;
+}
+
+.task.completed .task-text {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.task-data {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.task-checkbox {
+  width: 2rem;
+  height: 2rem;
+  accent-color: var(--success-neon);
+  cursor: pointer;
+}
+
+.task-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.task-text:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--warning-neon);
+}
+
+.task-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.task-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.task-btn:hover {
+  color: var(--danger-neon);
+  background: rgba(255, 68, 68, 0.1);
+  transform: scale(1.1);
+}
+
+.task-btn.edit-btn {
+  color: var(--warning-neon);
+}
+
+.task-btn.edit-btn:hover {
+  color: var(--warning-neon);
+  background: rgba(255, 170, 0, 0.1);
+  filter: drop-shadow(0 0 10px var(--warning-neon));
+}
+
+/* Inline Edit Styles */
+.task-edit-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--warning-neon);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  font-family: 'Rajdhani', sans-serif;
+  outline: none;
+  box-shadow: 0 0 10px var(--warning-neon);
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.task-edit-input:focus {
+  box-shadow: 0 0 20px var(--warning-neon);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Achievement Popup */
+.achievement-popup {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: linear-gradient(45deg, var(--accent-neon), var(--warning-neon));
+  color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 30px var(--accent-neon);
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  z-index: 1000;
+  max-width: 30rem;
+}
+
+.achievement-popup.show {
+  transform: translateX(0);
+}
+
+.achievement-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.achievement-icon {
+  font-size: 3rem;
+}
+
+.achievement-text h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-text p {
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .stats {
+    gap: 1.5rem;
+  }
+  
+  .input-container {
+    flex-direction: column;
+  }
+  
+  .control-panel {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .filter-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .mission-list {
+    max-height: 50rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-container {
+    padding: 1rem;
+  }
+  
+  .mission-control {
+    padding: 2rem;
+  }
+  
+  .logo h1 {
+    font-size: 2.8rem;
+  }
+  
+  .stat-item {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+.main-section{
+  background: linear-gradient(135deg,rgb(255, 165, 0,0.8), rgb(0, 0, 255,0.8));
+  max-width: 50rem;
+  margin: 5rem auto 0;
+  background-color: white;
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0.2rem 0.2rem 2rem 0.5rem black;
+}
+.main-section .input{
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  gap: 10px;
+}
+.main-section .input input{
+  width: calc(100% - 10rem);
+  height: 100%;
+  font-size: 1.6rem;
+  padding-left: 2rem;
+  border-radius:1rem ;
+  border: none;
+  outline: none;
+
+}
+.main-section .input input:focus{
+  border: 1px solid rgb(82, 82, 82);
+}
+.main-section .input button{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  width: 10rem;
+  border-radius: 1rem;
+  border: none;
+ background:linear-gradient(35deg, yellow,pink);
+  
+}
+.main-section .input button:hover{
+  box-shadow: 0.1rem 0.1rem 1rem 0.1rem orange;
+  cursor: pointer;
+}
+.main-section .control{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+}
+.main-section .control .control-options{
+  padding: 0.5rem 0;
+  width: calc(100% - 15rem);
+  display: flex;
+  justify-content: space-evenly;
+}
+.main-section .control .control-options span{
+  padding: 0.5rem 0;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: blue;
+  width: 10rem;
+ 
+}
+.main-section .control span:hover{
+  cursor: pointer;
+}
+.main-section .control .active{
+  border-radius: 1rem;
+  background:linear-gradient(35deg, orange,pink, blue);
+}
+.main-section  button{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.main-section .control button{
+  display: block;
+  padding: 0.8rem 1rem;
+  width: 10rem;
+  border: none;
+  outline: none;
+  background: linear-gradient(35deg, yellow,pink);
+  color: blue;
+  border-radius: 0.5rem;
+}
+.main-section .task-list{
+  
+  background-color: white;
+  border-radius: 2rem;
+  height: 35rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 0.5rem;
+  gap: 1.5rem;
+}
+.main-section .task-list .task{
+  position: relative;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:linear-gradient(35deg, orange,pink, blue);
+  
+}
+
+.main-section .task-list .task .data{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 2rem;
+}
+.main-section .task-list .task .data p{
+  font-size: 2rem;
+}
+.main-section .task-list .task .data input{
+  border: 1px solid black;
+  width: 80px;
+}
+.main-section .task-list .task i{
+ font-size: 2rem;
+ color: white;
+}
+.main-section .task-list .task i:hover{
+  cursor: pointer;
+}
+
+/* Animation for edit success */
+@keyframes editSuccess {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); box-shadow: 0 0 30px #ffaa00; }
+  100% { transform: scale(1); }
+}
+

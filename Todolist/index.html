@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberQuest - Task Manager</title>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="particles-container" id="particles"></div>
+  
+  <div class="game-container">
+    <header class="game-header">
+      <div class="logo">
+        <div class="logo-icon">⚡</div>
+        <h1>CyberQuest</h1>
+        <div class="logo-subtitle">Task Manager v2.0</div>
+      </div>
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-label">Level</span>
+          <span class="stat-value" id="level">1</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">XP</span>
+          <span class="stat-value" id="xp">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Tasks</span>
+          <span class="stat-value" id="task-count">0</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="game-main">
+      <div class="mission-control">
+        <div class="input-section">
+          <div class="input-container">
+            <input type="text" placeholder="Enter your mission..." id="input-task" class="mission-input">
+            <button onclick="handleData()" class="add-btn">
+              <i class='bx bx-plus'></i>
+              <span>Add Mission</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="control-panel">
+          <div class="filter-tabs">
+            <button class="filter-btn active" onclick="alldatahandle(); handleNavClick(this);">
+              <i class='bx bx-list-ul'></i>
+              <span>All Missions</span>
+            </button>
+            <button class="filter-btn" onclick="handlependingdata(); handleNavClick(this);">
+              <i class='bx bx-time'></i>
+              <span>Active</span>
+            </button>
+            <button class="filter-btn" onclick="handlecompletedata(); handleNavClick(this);">
+              <i class='bx bx-check-circle'></i>
+              <span>Completed</span>
+            </button>
+          </div>
+          <button onclick="handleclearall()" class="clear-btn">
+            <i class='bx bx-trash'></i>
+            <span>Clear All</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mission-list" id="task-list">
+        <div class="empty-state" id="empty-state">
+          <div class="empty-icon">🎯</div>
+          <h3>No Missions Yet</h3>
+          <p>Add your first mission to begin your quest!</p>
+        </div>
+      </div>
+    </main>
+
+    <div class="achievement-popup" id="achievement-popup">
+      <div class="achievement-content">
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-text">
+          <h4>Achievement Unlocked!</h4>
+          <p id="achievement-message">First mission completed!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

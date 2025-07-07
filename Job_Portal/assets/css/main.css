@@ -1,0 +1,16 @@
+/* Main CSS File - Imports all section styles */
+
+/* Import base styles */
+@import url('sections/base.css');
+
+/* Import section-specific styles */
+@import url('sections/header.css');
+@import url('sections/hero.css');
+@import url('sections/features.css');
+@import url('sections/jobs.css');
+@import url('sections/trust.css');
+@import url('sections/team.css');
+@import url('sections/footer.css');
+@import url('sections/animations.css');
+
+/* Additional global styles can be added here */ 

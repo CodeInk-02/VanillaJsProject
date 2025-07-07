@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Get Real-time Weather Updates</title>
+    <meta name="description" content="Get accurate weather information for any city around the world">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="app-title">
+                <i class='bx bx-cloud'></i>
+                Weather App
+            </h1>
+        </header>
+        
+        <main class="main-content">
+            <div class="weather-card">
+                <div class="search-section">
+                    <div class="search-container">
+                        <input 
+                            type="text" 
+                            id="city" 
+                            placeholder="Enter city name (e.g., New York, London)..." 
+                            aria-label="City name"
+                        >
+                        <button 
+                            type="button" 
+                            onclick="handlecity()" 
+                            class="search-btn"
+                            aria-label="Search weather"
+                        >
+                            <i class='bx bx-search'></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="weather-content" id="weather-content">
+                    <div class="welcome-state">
+                        <i class='bx bx-sun welcome-icon'></i>
+                        <h2>Welcome to Weather App</h2>
+                        <p>Enter a city name to get current weather information</p>
+                        <p style="font-size: 0.9rem; color: #999; margin-top: 10px;">
+                            <i class='bx bx-info-circle'></i> 
+                            Click on the search box to see popular city examples
+                        </p>
+                        <p style="font-size: 0.85rem; color: #999; margin-top: 5px;">
+                            <i class='bx bx-search'></i> 
+                            Start typing to get real-time city suggestions
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 Weather App. Powered by OpenWeatherMap API</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

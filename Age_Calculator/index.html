@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Age Calculator Main Container -->
+    <div class="main-box">
+        <div class="header">
+            <i class="fas fa-calculator"></i>
+            <h2>Advanced Age Calculator</h2>
+            <p>Discover your exact age in different time units</p>
+        </div>
+        
+        <div class="user-input">
+            <label for="day">Enter Your Date Of Birth</label>
+            <div class="input-box">
+                <div class="input-group">
+                    <input type="number" min="1" max="31" id="day" placeholder="DD" step="1">
+                    <span class="input-label">Day</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" min="1" max="12" id="month" placeholder="MM" step="1">
+                    <span class="input-label">Month</span>
+                </div>
+                <div class="input-group">
+                    <input type="number" min="1900" max="2100" id="year" placeholder="YYYY" step="1">
+                    <span class="input-label">Year</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <button onclick="calculateAge()" class="calculate-btn">
+                <i class="fas fa-play"></i>
+                Calculate Age
+            </button>
+            <button onclick="resetCalculator()" class="reset-btn">
+                <i class="fas fa-redo"></i>
+                Reset
+            </button>
+        </div>
+        
+        <div class="result-container" id="result-container">
+            <div class="result-section">
+                <h3>Your Age</h3>
+                <div class="main-result">
+                    <div class="result-box" id="years-box">
+                        <span class="number">0</span>
+                        <span class="label">Years</span>
+                    </div>
+                    <div class="result-box" id="months-box">
+                        <span class="number">0</span>
+                        <span class="label">Months</span>
+                    </div>
+                    <div class="result-box" id="days-box">
+                        <span class="number">0</span>
+                        <span class="label">Days</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detailed-breakdown" id="detailed-breakdown">
+                <h3>Detailed Breakdown</h3>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <div class="breakdown-number" id="total-days">0</div>
+                        <div class="breakdown-label">Total Days</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-number" id="total-hours">0</div>
+                        <div class="breakdown-label">Total Hours</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-number" id="total-minutes">0</div>
+                        <div class="breakdown-label">Total Minutes</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="breakdown-number" id="total-seconds">0</div>
+                        <div class="breakdown-label">Total Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="live-update" id="live-update">
+            <div class="live-indicator">
+                <i class="fas fa-circle pulse"></i>
+                <span>Live Updates Active</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
