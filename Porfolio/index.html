@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishav - Web Developer Portfolio</title>
+    <meta name="description" content="Rishav's professional web development portfolio showcasing modern, responsive applications">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-text">Rishav</span>
+                <div class="logo-dot"></div>
+            </div>
+            <ul class="navbar-links" id="navbarLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
+                <div class="greeting animate-on-load">
+                    <span class="wave">👋</span>
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-title animate-on-load">
+                    <span class="name">Rishav</span>
+                    <span class="title">Web Developer</span>
+                </h1>
+                <p class="hero-description animate-on-load">
+                    Crafting modern, responsive, and user-friendly web applications with passion and precision.
+                </p>
+                <div class="hero-buttons animate-on-load">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                        <i class='bx bx-envelope'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-graphics" data-aos="fade-left" data-aos-delay="400">
+                <div class="graphics-container">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>const developer = {
+  name: "Rishav",
+  role: "Web Developer",
+  skills: ["HTML", "CSS", "JS"],
+  passion: "Creating amazing web experiences"
+};</code></pre>
+                        </div>
+                    </div>
+                    <div class="floating-icons">
+                        <i class='bx bxl-html5'></i>
+                        <i class='bx bxl-css3'></i>
+                        <i class='bx bxl-javascript'></i>
+                        <i class='bx bxl-react'></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Passionate Web Developer</h3>
+                    <p>I'm a dedicated web developer with a passion for creating beautiful, functional, and user-centric digital experiences. With expertise in modern web technologies, I transform ideas into reality through clean code and innovative design.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-graphics" data-aos="fade-left">
+                    <div class="container-3d">
+                        <div class="cube">
+                            <div class="cube-face front">
+                                <i class='bx bxl-html5'></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="cube-face back">
+                                <i class='bx bxl-css3'></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="cube-face right">
+                                <i class='bx bxl-javascript'></i>
+                                <span>JS</span>
+                            </div>
+                            <div class="cube-face left">
+                                <i class='bx bxl-react'></i>
+                                <span>React</span>
+                            </div>
+                            <div class="cube-face top">
+                                <i class='bx bxl-github'></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="cube-face bottom">
+                                <i class='bx bxl-nodejs'></i>
+                                <span>Node</span>
+                            </div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-card">
+                                <i class='bx bx-code-alt'></i>
+                                <span>Clean Code</span>
+                            </div>
+                            <div class="floating-card">
+                                <i class='bx bx-mobile-alt'></i>
+                                <span>Responsive</span>
+                            </div>
+                            <div class="floating-card">
+                                <i class='bx bx-palette'></i>
+                                <span>Creative</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="./assets/project1.jpeg" alt="Age Calculator">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                                <a href="#" class="project-link" title="Source Code">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Age Calculator</h3>
+                        <p>A modern web application that calculates age based on birthdate with a beautiful UI and smooth animations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="./assets/myimage2.jpg" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                                <a href="#" class="project-link" title="Source Code">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A responsive portfolio website showcasing my skills, projects, and professional journey with modern design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="./assets/ball.jpg" alt="E-commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Live Demo">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                                <a href="#" class="project-link" title="Source Code">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Platform</h3>
+                        <p>A full-stack e-commerce solution with user authentication, product management, and payment integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-info">
+                                <span class="skill-name">Tailwind CSS</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Tools & Technologies</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <i class='bx bxl-git'></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class='bx bxl-github'></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class='bx bxl-figma'></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class='bx bxl-vscode'></i>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certificates-grid">
+                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="200" onclick="openLightbox('./assets/HTML.jpg')">
+                    <div class="certificate-image">
+                        <img src="./assets/HTML.jpg" alt="HTML Certificate">
+                        <div class="certificate-overlay">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>HTML Fundamentals</h4>
+                        <p>Complete HTML5 course certification</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="300" onclick="openLightbox('./assets/CSS.jpg')">
+                    <div class="certificate-image">
+                        <img src="./assets/CSS.jpg" alt="CSS Certificate">
+                        <div class="certificate-overlay">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>CSS Mastery</h4>
+                        <p>Advanced CSS styling and layout</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="400" onclick="openLightbox('./assets/JAVASCRIPT.jpg')">
+                    <div class="certificate-image">
+                        <img src="./assets/JAVASCRIPT.jpg" alt="JavaScript Certificate">
+                        <div class="certificate-overlay">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>JavaScript ES6+</h4>
+                        <p>Modern JavaScript development</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="500" onclick="openLightbox('./assets/Reactjs.jpg')">
+                    <div class="certificate-image">
+                        <img src="./assets/Reactjs.jpg" alt="React Certificate">
+                        <div class="certificate-overlay">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>React Development</h4>
+                        <p>React.js framework certification</p>
+                    </div>
+                </div>
+
+                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="600" onclick="openLightbox('./assets/Tailwind.jpg')">
+                    <div class="certificate-image">
+                        <img src="./assets/Tailwind.jpg" alt="Tailwind Certificate">
+                        <div class="certificate-overlay">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Tailwind CSS</h4>
+                        <p>Utility-first CSS framework</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class='bx bx-envelope'></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>rishav@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-map'></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-time'></i>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Open for opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>Rishav</span>
+                </div>
+                <p>&copy; 2024 Rishav. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="Certificate">
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class='bx bx-chevron-up'></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
